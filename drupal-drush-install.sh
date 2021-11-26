@@ -24,7 +24,7 @@ read NAME_DIR
 mkdir $NAME_DIR
 
 echo 'Cloning the repo... '
-git clone git@bitbucket.org:ciandt_it/drupal_lando_config.git ./$NAME_DIR
+git clone git@github.com:ggalmeida1/drupal-config.git ./$NAME_DIR
 
 cd $NAME_DIR
 
@@ -70,7 +70,7 @@ case $OPTION in
         ;;
 
     2) 
-        lando drush site:install standard --db-url=mysql://drupal9:drupal9@database/drupal9 --site-name=$PROJECT_NAME
+        lando drush site:install --db-url=mysql://drupal9:drupal9@database/drupal9 --site-name=$PROJECT_NAME
         sleep 3
         exit
         ;;
